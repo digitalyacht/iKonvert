@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1020</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="4" column="0">
+    <widget class="QGroupBox" name="additionalOptionsGroupBox">
+     <property name="title">
+      <string>Sentence generator settings</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="0" alignment="Qt::AlignTop">
+         <widget class="QLabel" name="filename_label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>test.csv</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="repeat_spin">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>50</number>
+          </property>
+          <property name="maximum">
+           <number>10000</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="browseCSV">
+          <property name="text">
+           <string>Browse for CSV file</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignTop">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>PGN TX Interval (ms):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="selectBox">
+     <property name="title">
+      <string>Select Serial Port</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QComboBox" name="serialPortInfoListBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="descriptionLabel">
+        <property name="text">
+         <string>Description:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="locationLabel">
+        <property name="text">
+         <string>Location:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="serialNumberLabel">
+        <property name="text">
+         <string>Serial number:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="manufacturerLabel">
+        <property name="text">
+         <string>Manufacturer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="vidLabel">
+        <property name="text">
+         <string>Vendor ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="pidLabel">
+        <property name="text">
+         <string>Product ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="parametersBox">
+     <property name="title">
+      <string>Select Port Parameters</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QLabel" name="parityLabel">
+        <property name="text">
+         <string>Parity:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="baudRateLabel">
+        <property name="text">
+         <string>BaudRate:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="stopBitsBox"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="parityBox"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="dataBitsBox"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="baudRateBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="dataBitsLabel">
+        <property name="text">
+         <string>Data bits:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="stopBitsLabel">
+        <property name="text">
+         <string>Stop bits:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="flowControlBox"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="flowControlLabel">
+        <property name="text">
+         <string>Flow control:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QCheckBox" name="Base64CheckBox">
+        <property name="text">
+         <string>Base64</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="localEchoCheckBox">
+        <property name="text">
+         <string>Local echo</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QCheckBox" name="NormalModeCheckBox">
+        <property name="text">
+         <string>Normal mode</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="9" column="0">
+       <widget class="QCheckBox" name="ShowNSMCheckBox">
+        <property name="text">
+         <string>Show N.S.M.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="3" rowspan="5">
+    <widget class="QScrollArea" name="PGNtable">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>840</width>
+        <height>3174</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="34" column="0">
+        <widget class="QCheckBox" name="tx32RB"/>
+       </item>
+       <item row="34" column="3">
+        <widget class="QCheckBox" name="rx32RB">
+         <property name="text">
+          <string>127498 - Engine Parameters, Static</string>
+         </property>
+        </widget>
+       </item>
+       <item row="32" column="0">
+        <widget class="QCheckBox" name="tx30RB"/>
+       </item>
+       <item row="36" column="3">
+        <widget class="QCheckBox" name="rx34RB">
+         <property name="text">
+          <string>127501 - Binary Status Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="37" column="0">
+        <widget class="QCheckBox" name="tx35RB"/>
+       </item>
+       <item row="38" column="3">
+        <widget class="QCheckBox" name="rx36RB">
+         <property name="text">
+          <string>127503 - AC Input Status -DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="35" column="3">
+        <widget class="QCheckBox" name="rx33RB">
+         <property name="text">
+          <string>127500 - Load Controller Connection State / Control</string>
+         </property>
+        </widget>
+       </item>
+       <item row="37" column="3">
+        <widget class="QCheckBox" name="rx35RB">
+         <property name="text">
+          <string>127502 - Switch Bank Control</string>
+         </property>
+        </widget>
+       </item>
+       <item row="42" column="0">
+        <widget class="QCheckBox" name="tx40RB"/>
+       </item>
+       <item row="43" column="0">
+        <widget class="QCheckBox" name="tx41RB"/>
+       </item>
+       <item row="33" column="3">
+        <widget class="QCheckBox" name="rx31RB">
+         <property name="text">
+          <string>127497 - Trip Fuel Consumption, Engine</string>
+         </property>
+        </widget>
+       </item>
+       <item row="41" column="3">
+        <widget class="QCheckBox" name="rx39RB">
+         <property name="text">
+          <string>127506 - DC Detailed Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="43" column="3">
+        <widget class="QCheckBox" name="rx41RB">
+         <property name="text">
+          <string>127508 - Battery Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="30" column="0">
+        <widget class="QCheckBox" name="tx28RB"/>
+       </item>
+       <item row="35" column="0">
+        <widget class="QCheckBox" name="tx33RB"/>
+       </item>
+       <item row="29" column="3">
+        <widget class="QCheckBox" name="rx27RB">
+         <property name="text">
+          <string>127488 - Engine Parameters, Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="39" column="0">
+        <widget class="QCheckBox" name="tx37RB"/>
+       </item>
+       <item row="30" column="3">
+        <widget class="QCheckBox" name="rx28RB">
+         <property name="text">
+          <string>127489 - Engine Parameters, Dynamic</string>
+         </property>
+        </widget>
+       </item>
+       <item row="38" column="0">
+        <widget class="QCheckBox" name="tx36RB"/>
+       </item>
+       <item row="39" column="3">
+        <widget class="QCheckBox" name="rx37RB">
+         <property name="text">
+          <string>127504 - AC Output Status -DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="40" column="0">
+        <widget class="QCheckBox" name="tx38RB"/>
+       </item>
+       <item row="40" column="3">
+        <widget class="QCheckBox" name="rx38RB">
+         <property name="text">
+          <string>127505 - Fluid Level</string>
+         </property>
+        </widget>
+       </item>
+       <item row="42" column="3">
+        <widget class="QCheckBox" name="rx40RB">
+         <property name="text">
+          <string>127507 - Charger Status- DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="44" column="0">
+        <widget class="QCheckBox" name="tx42RB"/>
+       </item>
+       <item row="31" column="0">
+        <widget class="QCheckBox" name="tx29RB"/>
+       </item>
+       <item row="32" column="3">
+        <widget class="QCheckBox" name="rx30RB">
+         <property name="text">
+          <string>127496 - Trip Fuel Consumption, Vessel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="41" column="0">
+        <widget class="QCheckBox" name="tx39RB"/>
+       </item>
+       <item row="44" column="3">
+        <widget class="QCheckBox" name="rx42RB">
+         <property name="text">
+          <string>127509 - Inverter Status- DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="33" column="0">
+        <widget class="QCheckBox" name="tx31RB"/>
+       </item>
+       <item row="36" column="0">
+        <widget class="QCheckBox" name="tx34RB"/>
+       </item>
+       <item row="31" column="3">
+        <widget class="QCheckBox" name="rx29RB">
+         <property name="text">
+          <string>127493 - Transmission Parameters, Dynamic</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="0">
+        <widget class="QCheckBox" name="tx27RB"/>
+       </item>
+       <item row="49" column="3">
+        <widget class="QCheckBox" name="rx47RB">
+         <property name="text">
+          <string>127514 - AGS Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="47" column="0">
+        <widget class="QCheckBox" name="tx45RB"/>
+       </item>
+       <item row="50" column="0">
+        <widget class="QCheckBox" name="tx48RB"/>
+       </item>
+       <item row="50" column="3">
+        <widget class="QCheckBox" name="rx48RB">
+         <property name="text">
+          <string>127744 - AC Power / Current- Phase A</string>
+         </property>
+        </widget>
+       </item>
+       <item row="48" column="3">
+        <widget class="QCheckBox" name="rx46RB">
+         <property name="text">
+          <string>127513 - Battery Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="47" column="3">
+        <widget class="QCheckBox" name="rx45RB">
+         <property name="text">
+          <string>127512 - AGS Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="49" column="0">
+        <widget class="QCheckBox" name="tx47RB"/>
+       </item>
+       <item row="51" column="0">
+        <widget class="QCheckBox" name="tx49RB"/>
+       </item>
+       <item row="51" column="3">
+        <widget class="QCheckBox" name="rx49RB">
+         <property name="text">
+          <string>127745 - AC Power / Current- Phase B</string>
+         </property>
+        </widget>
+       </item>
+       <item row="56" column="3">
+        <widget class="QCheckBox" name="rx54RB">
+         <property name="text">
+          <string>127750 - Converter (Inverter/Charger) Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="57" column="0">
+        <widget class="QCheckBox" name="tx55RB"/>
+       </item>
+       <item row="53" column="3">
+        <widget class="QCheckBox" name="rx51RB">
+         <property name="text">
+          <string>127747 - AC Voltage / Frequency-Phase A</string>
+         </property>
+        </widget>
+       </item>
+       <item row="54" column="3">
+        <widget class="QCheckBox" name="rx52RB">
+         <property name="text">
+          <string>127748 - AC Voltage / Frequency-Phase B</string>
+         </property>
+        </widget>
+       </item>
+       <item row="57" column="3">
+        <widget class="QCheckBox" name="rx55RB">
+         <property name="text">
+          <string>127751 - DC Voltage / Current</string>
+         </property>
+        </widget>
+       </item>
+       <item row="56" column="0">
+        <widget class="QCheckBox" name="tx54RB"/>
+       </item>
+       <item row="45" column="0">
+        <widget class="QCheckBox" name="tx43RB"/>
+       </item>
+       <item row="58" column="0">
+        <widget class="QCheckBox" name="tx56RB"/>
+       </item>
+       <item row="58" column="3">
+        <widget class="QCheckBox" name="rx56RB">
+         <property name="text">
+          <string>128259 - Speed, Water Referenced</string>
+         </property>
+        </widget>
+       </item>
+       <item row="55" column="3">
+        <widget class="QCheckBox" name="rx53RB">
+         <property name="text">
+          <string>127749 - AC Voltage / Frequency-Phase C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="59" column="0">
+        <widget class="QCheckBox" name="tx57RB"/>
+       </item>
+       <item row="59" column="3">
+        <widget class="QCheckBox" name="rx57RB">
+         <property name="text">
+          <string>128267 - Water Depth</string>
+         </property>
+        </widget>
+       </item>
+       <item row="48" column="0">
+        <widget class="QCheckBox" name="tx46RB"/>
+       </item>
+       <item row="55" column="0">
+        <widget class="QCheckBox" name="tx53RB"/>
+       </item>
+       <item row="54" column="0">
+        <widget class="QCheckBox" name="tx52RB"/>
+       </item>
+       <item row="60" column="0">
+        <widget class="QCheckBox" name="tx58RB"/>
+       </item>
+       <item row="52" column="0">
+        <widget class="QCheckBox" name="tx50RB"/>
+       </item>
+       <item row="53" column="0">
+        <widget class="QCheckBox" name="tx51RB"/>
+       </item>
+       <item row="46" column="0">
+        <widget class="QCheckBox" name="tx44RB"/>
+       </item>
+       <item row="60" column="3">
+        <widget class="QCheckBox" name="rx58RB">
+         <property name="text">
+          <string>128275 - Distance Log</string>
+         </property>
+        </widget>
+       </item>
+       <item row="52" column="3">
+        <widget class="QCheckBox" name="rx50RB">
+         <property name="text">
+          <string>127746 - AC Power / Current- Phase C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="45" column="3">
+        <widget class="QCheckBox" name="rx43RB">
+         <property name="text">
+          <string>127510 - Charger Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="46" column="3">
+        <widget class="QCheckBox" name="rx44RB">
+         <property name="text">
+          <string>127511 - Inverter Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="61" column="3">
+        <widget class="QCheckBox" name="rx59RB">
+         <property name="text">
+          <string>128520 - Tracked Target Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="74" column="3">
+        <widget class="QCheckBox" name="rx72RB">
+         <property name="text">
+          <string>129283 - Cross Track Error</string>
+         </property>
+        </widget>
+       </item>
+       <item row="69" column="3">
+        <widget class="QCheckBox" name="rx67RB">
+         <property name="text">
+          <string>129039 - AIS Class B Position Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="66" column="0">
+        <widget class="QCheckBox" name="tx64RB"/>
+       </item>
+       <item row="75" column="0">
+        <widget class="QCheckBox" name="tx73RB"/>
+       </item>
+       <item row="68" column="3">
+        <widget class="QCheckBox" name="rx66RB">
+         <property name="text">
+          <string>129038 - AIS Class A Position Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="64" column="3">
+        <widget class="QCheckBox" name="rx62RB">
+         <property name="text">
+          <string>129027 - Position Delta, High Precision Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="67" column="0">
+        <widget class="QCheckBox" name="tx65RB"/>
+       </item>
+       <item row="69" column="0">
+        <widget class="QCheckBox" name="tx67RB"/>
+       </item>
+       <item row="66" column="3">
+        <widget class="QCheckBox" name="rx64RB">
+         <property name="text">
+          <string>129029 - GNSS Position Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="62" column="3">
+        <widget class="QCheckBox" name="rx60RB">
+         <property name="text">
+          <string>129025 - Position, Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="62" column="0">
+        <widget class="QCheckBox" name="tx60RB"/>
+       </item>
+       <item row="64" column="0">
+        <widget class="QCheckBox" name="tx62RB"/>
+       </item>
+       <item row="67" column="3">
+        <widget class="QCheckBox" name="rx65RB">
+         <property name="text">
+          <string>129033 - Local Time Offset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="70" column="0">
+        <widget class="QCheckBox" name="tx68RB"/>
+       </item>
+       <item row="63" column="0">
+        <widget class="QCheckBox" name="tx61RB"/>
+       </item>
+       <item row="72" column="3">
+        <widget class="QCheckBox" name="rx70RB">
+         <property name="text">
+          <string>129044 - Datum</string>
+         </property>
+        </widget>
+       </item>
+       <item row="73" column="0">
+        <widget class="QCheckBox" name="tx71RB"/>
+       </item>
+       <item row="70" column="3">
+        <widget class="QCheckBox" name="rx68RB">
+         <property name="text">
+          <string>129040 - AIS Class B Extended Position Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="71" column="3">
+        <widget class="QCheckBox" name="rx69RB">
+         <property name="text">
+          <string>129041 - AIS Aids to Navigation (AtoN) Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="73" column="3">
+        <widget class="QCheckBox" name="rx71RB">
+         <property name="text">
+          <string>129045 - User Datum Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item row="75" column="3">
+        <widget class="QCheckBox" name="rx73RB">
+         <property name="text">
+          <string>129284 - Navigation Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="76" column="0">
+        <widget class="QCheckBox" name="tx74RB"/>
+       </item>
+       <item row="76" column="3">
+        <widget class="QCheckBox" name="rx74RB">
+         <property name="text">
+          <string>129285 - Navigation - Route/WP information</string>
+         </property>
+        </widget>
+       </item>
+       <item row="71" column="0">
+        <widget class="QCheckBox" name="tx69RB"/>
+       </item>
+       <item row="72" column="0">
+        <widget class="QCheckBox" name="tx70RB"/>
+       </item>
+       <item row="74" column="0">
+        <widget class="QCheckBox" name="tx72RB"/>
+       </item>
+       <item row="63" column="3">
+        <widget class="QCheckBox" name="rx61RB">
+         <property name="text">
+          <string>129026 - COG and SOG, Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="65" column="0">
+        <widget class="QCheckBox" name="tx63RB"/>
+       </item>
+       <item row="61" column="0">
+        <widget class="QCheckBox" name="tx59RB"/>
+       </item>
+       <item row="65" column="3">
+        <widget class="QCheckBox" name="rx63RB">
+         <property name="text">
+          <string>129028 - Altitude Delta, High Precision Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="68" column="0">
+        <widget class="QCheckBox" name="tx66RB"/>
+       </item>
+       <item row="78" column="3">
+        <widget class="QCheckBox" name="rx76RB">
+         <property name="text">
+          <string>129301 - Time to/from Mark</string>
+         </property>
+        </widget>
+       </item>
+       <item row="79" column="0">
+        <widget class="QCheckBox" name="tx77RB"/>
+       </item>
+       <item row="80" column="0">
+        <widget class="QCheckBox" name="tx78RB"/>
+       </item>
+       <item row="79" column="3">
+        <widget class="QCheckBox" name="rx77RB">
+         <property name="text">
+          <string>129302 - Bearing and Distance between two Marks</string>
+         </property>
+        </widget>
+       </item>
+       <item row="77" column="3">
+        <widget class="QCheckBox" name="rx75RB">
+         <property name="text">
+          <string>129291 - Set and Drift, Rapid Update</string>
+         </property>
+        </widget>
+       </item>
+       <item row="78" column="0">
+        <widget class="QCheckBox" name="tx76RB"/>
+       </item>
+       <item row="80" column="3">
+        <widget class="QCheckBox" name="rx78RB">
+         <property name="text">
+          <string>129538 - GNSS Control Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="87" column="3">
+        <widget class="QCheckBox" name="rx85RB">
+         <property name="text">
+          <string>129547 - GNSS Pseudorange Error Statistics</string>
+         </property>
+        </widget>
+       </item>
+       <item row="88" column="0">
+        <widget class="QCheckBox" name="tx86RB"/>
+       </item>
+       <item row="90" column="0">
+        <widget class="QCheckBox" name="tx88RB"/>
+       </item>
+       <item row="85" column="3">
+        <widget class="QCheckBox" name="rx83RB">
+         <property name="text">
+          <string>129545 - GNSS RAIM Output</string>
+         </property>
+        </widget>
+       </item>
+       <item row="82" column="3">
+        <widget class="QCheckBox" name="rx80RB">
+         <property name="text">
+          <string>129540 - GNSS Sats in View</string>
+         </property>
+        </widget>
+       </item>
+       <item row="83" column="3">
+        <widget class="QCheckBox" name="rx81RB">
+         <property name="text">
+          <string>129541 - GPS Almanac Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="85" column="0">
+        <widget class="QCheckBox" name="tx83RB"/>
+       </item>
+       <item row="87" column="0">
+        <widget class="QCheckBox" name="tx85RB"/>
+       </item>
+       <item row="86" column="0">
+        <widget class="QCheckBox" name="tx84RB"/>
+       </item>
+       <item row="89" column="3">
+        <widget class="QCheckBox" name="rx87RB">
+         <property name="text">
+          <string>129550 - GNSS Differential Correction Receiver Interface</string>
+         </property>
+        </widget>
+       </item>
+       <item row="91" column="3">
+        <widget class="QCheckBox" name="rx89RB">
+         <property name="text">
+          <string>129556 - GLONASS Almanac Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="84" column="3">
+        <widget class="QCheckBox" name="rx82RB">
+         <property name="text">
+          <string>129542 - GNSS Pseudorange Noise Statistics</string>
+         </property>
+        </widget>
+       </item>
+       <item row="92" column="0">
+        <widget class="QCheckBox" name="tx90RB"/>
+       </item>
+       <item row="88" column="3">
+        <widget class="QCheckBox" name="rx86RB">
+         <property name="text">
+          <string>129549 - DGNSS Corrections</string>
+         </property>
+        </widget>
+       </item>
+       <item row="77" column="0">
+        <widget class="QCheckBox" name="tx75RB"/>
+       </item>
+       <item row="84" column="0">
+        <widget class="QCheckBox" name="tx82RB"/>
+       </item>
+       <item row="83" column="0">
+        <widget class="QCheckBox" name="tx81RB"/>
+       </item>
+       <item row="91" column="0">
+        <widget class="QCheckBox" name="tx89RB"/>
+       </item>
+       <item row="81" column="0">
+        <widget class="QCheckBox" name="tx79RB"/>
+       </item>
+       <item row="82" column="0">
+        <widget class="QCheckBox" name="tx80RB"/>
+       </item>
+       <item row="86" column="3">
+        <widget class="QCheckBox" name="rx84RB">
+         <property name="text">
+          <string>129546 - GNSS RAIM Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item row="90" column="3">
+        <widget class="QCheckBox" name="rx88RB">
+         <property name="text">
+          <string>129551 - GNSS Differential Correction Receiver Signal</string>
+         </property>
+        </widget>
+       </item>
+       <item row="81" column="3">
+        <widget class="QCheckBox" name="rx79RB">
+         <property name="text">
+          <string>129539 - GNSS DOPs</string>
+         </property>
+        </widget>
+       </item>
+       <item row="89" column="0">
+        <widget class="QCheckBox" name="tx87RB"/>
+       </item>
+       <item row="92" column="3">
+        <widget class="QCheckBox" name="rx90RB">
+         <property name="text">
+          <string>129792 - AIS DGNSS Broadcast Binary Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="96" column="3">
+        <widget class="QCheckBox" name="rx94RB">
+         <property name="text">
+          <string>129796 - AIS Acknowledge</string>
+         </property>
+        </widget>
+       </item>
+       <item row="99" column="0">
+        <widget class="QCheckBox" name="tx97RB"/>
+       </item>
+       <item row="95" column="3">
+        <widget class="QCheckBox" name="rx93RB">
+         <property name="text">
+          <string>129795 - AIS Addressed Binary Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="98" column="0">
+        <widget class="QCheckBox" name="tx96RB"/>
+       </item>
+       <item row="104" column="3">
+        <widget class="QCheckBox" name="rx102RB">
+         <property name="text">
+          <string>129804 - AIS Assignment Mode Command</string>
+         </property>
+        </widget>
+       </item>
+       <item row="93" column="0">
+        <widget class="QCheckBox" name="tx91RB"/>
+       </item>
+       <item row="100" column="3">
+        <widget class="QCheckBox" name="rx98RB">
+         <property name="text">
+          <string>129800 - AIS UTC/Date Inquiry</string>
+         </property>
+        </widget>
+       </item>
+       <item row="102" column="3">
+        <widget class="QCheckBox" name="rx100RB">
+         <property name="text">
+          <string>129802 - AIS Safety Related Broadcast Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="102" column="0">
+        <widget class="QCheckBox" name="tx100RB"/>
+       </item>
+       <item row="103" column="0">
+        <widget class="QCheckBox" name="tx101RB"/>
+       </item>
+       <item row="96" column="0">
+        <widget class="QCheckBox" name="tx94RB"/>
+       </item>
+       <item row="98" column="3">
+        <widget class="QCheckBox" name="rx96RB">
+         <property name="text">
+          <string>129798 - AIS SAR Aircraft Position Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="103" column="3">
+        <widget class="QCheckBox" name="rx101RB">
+         <property name="text">
+          <string>129803 - AIS Interrogation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="105" column="0">
+        <widget class="QCheckBox" name="tx103RB"/>
+       </item>
+       <item row="101" column="3">
+        <widget class="QCheckBox" name="rx99RB">
+         <property name="text">
+          <string>129801 - AIS Addressed Safety Related Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="105" column="3">
+        <widget class="QCheckBox" name="rx103RB">
+         <property name="text">
+          <string>129805 - AIS Data Link Management Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="106" column="0">
+        <widget class="QCheckBox" name="tx104RB"/>
+       </item>
+       <item row="93" column="3">
+        <widget class="QCheckBox" name="rx91RB">
+         <property name="text">
+          <string>129793 - AIS UTC and Date Report</string>
+         </property>
+        </widget>
+       </item>
+       <item row="97" column="0">
+        <widget class="QCheckBox" name="tx95RB"/>
+       </item>
+       <item row="99" column="3">
+        <widget class="QCheckBox" name="rx97RB">
+         <property name="text">
+          <string>129799 - Radio Frequency/Mode/Power</string>
+         </property>
+        </widget>
+       </item>
+       <item row="101" column="0">
+        <widget class="QCheckBox" name="tx99RB"/>
+       </item>
+       <item row="94" column="3">
+        <widget class="QCheckBox" name="rx92RB">
+         <property name="text">
+          <string>129794 - AIS Class A Static and Voyage Related Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="107" column="0">
+        <widget class="QCheckBox" name="tx105RB"/>
+       </item>
+       <item row="107" column="3">
+        <widget class="QCheckBox" name="rx105RB">
+         <property name="text">
+          <string>129807 - AIS Group Assignment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="108" column="0">
+        <widget class="QCheckBox" name="tx106RB"/>
+       </item>
+       <item row="104" column="0">
+        <widget class="QCheckBox" name="tx102RB"/>
+       </item>
+       <item row="108" column="3">
+        <widget class="QCheckBox" name="rx106RB">
+         <property name="text">
+          <string>129808 - DSC Call Information</string>
+         </property>
+        </widget>
+       </item>
+       <item row="94" column="0">
+        <widget class="QCheckBox" name="tx92RB"/>
+       </item>
+       <item row="97" column="3">
+        <widget class="QCheckBox" name="rx95RB">
+         <property name="text">
+          <string>129797 - AIS Binary Broadcast Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="100" column="0">
+        <widget class="QCheckBox" name="tx98RB"/>
+       </item>
+       <item row="95" column="0">
+        <widget class="QCheckBox" name="tx93RB"/>
+       </item>
+       <item row="106" column="3">
+        <widget class="QCheckBox" name="rx104RB">
+         <property name="text">
+          <string>129806 - AIS Channel Management</string>
+         </property>
+        </widget>
+       </item>
+       <item row="118" column="3">
+        <widget class="QCheckBox" name="rx116RB">
+         <property name="text">
+          <string>130061 - Channel Source Configuration</string>
+         </property>
+        </widget>
+       </item>
+       <item row="115" column="0">
+        <widget class="QCheckBox" name="tx113RB"/>
+       </item>
+       <item row="114" column="0">
+        <widget class="QCheckBox" name="tx112RB"/>
+       </item>
+       <item row="119" column="0">
+        <widget class="QCheckBox" name="tx117RB"/>
+       </item>
+       <item row="119" column="3">
+        <widget class="QCheckBox" name="rx117RB">
+         <property name="text">
+          <string>130064 - Route and WP Service - Database List</string>
+         </property>
+        </widget>
+       </item>
+       <item row="120" column="0">
+        <widget class="QCheckBox" name="tx118RB"/>
+       </item>
+       <item row="112" column="3">
+        <widget class="QCheckBox" name="rx110RB">
+         <property name="text">
+          <string>129812 - AIS Multi Slot Binary Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="122" column="0">
+        <widget class="QCheckBox" name="tx120RB"/>
+       </item>
+       <item row="122" column="3">
+        <widget class="QCheckBox" name="rx120RB">
+         <property name="text">
+          <string>130067 - Route and WP Service - Route - WP Name and Position</string>
+         </property>
+        </widget>
+       </item>
+       <item row="124" column="0">
+        <widget class="QCheckBox" name="tx122RB"/>
+       </item>
+       <item row="124" column="3">
+        <widget class="QCheckBox" name="rx122RB">
+         <property name="text">
+          <string>130069 - Route and WP Service - XTE Limit and Navigation Method</string>
+         </property>
+        </widget>
+       </item>
+       <item row="116" column="3">
+        <widget class="QCheckBox" name="rx114RB">
+         <property name="text">
+          <string>130054 - Loran-C Signal Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="121" column="3">
+        <widget class="QCheckBox" name="rx119RB">
+         <property name="text">
+          <string>130066 - Route and WP Service - Route/WP-List Attributes</string>
+         </property>
+        </widget>
+       </item>
+       <item row="118" column="0">
+        <widget class="QCheckBox" name="tx116RB"/>
+       </item>
+       <item row="117" column="0">
+        <widget class="QCheckBox" name="tx115RB"/>
+       </item>
+       <item row="116" column="0">
+        <widget class="QCheckBox" name="tx114RB"/>
+       </item>
+       <item row="120" column="3">
+        <widget class="QCheckBox" name="rx118RB">
+         <property name="text">
+          <string>130065 - Route and WP Service - Route List</string>
+         </property>
+        </widget>
+       </item>
+       <item row="121" column="0">
+        <widget class="QCheckBox" name="tx119RB"/>
+       </item>
+       <item row="109" column="0">
+        <widget class="QCheckBox" name="tx107RB"/>
+       </item>
+       <item row="110" column="0">
+        <widget class="QCheckBox" name="tx108RB"/>
+       </item>
+       <item row="123" column="0">
+        <widget class="QCheckBox" name="tx121RB"/>
+       </item>
+       <item row="113" column="0">
+        <widget class="QCheckBox" name="tx111RB"/>
+       </item>
+       <item row="123" column="3">
+        <widget class="QCheckBox" name="rx121RB">
+         <property name="text">
+          <string>130068 - Route and WP Service - Route - WP Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="115" column="3">
+        <widget class="QCheckBox" name="rx113RB">
+         <property name="text">
+          <string>130053 - Loran-C Range Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="109" column="3">
+        <widget class="QCheckBox" name="rx107RB">
+         <property name="text">
+          <string>129809 - AIS Class B &quot;CS&quot; Static Data Report, Part A</string>
+         </property>
+        </widget>
+       </item>
+       <item row="110" column="3">
+        <widget class="QCheckBox" name="rx108RB">
+         <property name="text">
+          <string>129810 - AIS Class B &quot;CS&quot; Static Data Report, Part B</string>
+         </property>
+        </widget>
+       </item>
+       <item row="113" column="3">
+        <widget class="QCheckBox" name="rx111RB">
+         <property name="text">
+          <string>129813 - AIS Long-Range Broadcast Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="111" column="3">
+        <widget class="QCheckBox" name="rx109RB">
+         <property name="text">
+          <string>129811 - AIS Single Slot Binary Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="114" column="3">
+        <widget class="QCheckBox" name="rx112RB">
+         <property name="text">
+          <string>130052 - Loran-C TD Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="117" column="3">
+        <widget class="QCheckBox" name="rx115RB">
+         <property name="text">
+          <string>130060 - Label</string>
+         </property>
+        </widget>
+       </item>
+       <item row="111" column="0">
+        <widget class="QCheckBox" name="tx109RB"/>
+       </item>
+       <item row="112" column="0">
+        <widget class="QCheckBox" name="tx110RB"/>
+       </item>
+       <item row="126" column="3">
+        <widget class="QCheckBox" name="rx124RB">
+         <property name="text">
+          <string>130071 - Route and WP Service - Route Comment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="131" column="3">
+        <widget class="QCheckBox" name="rx129RB">
+         <property name="text">
+          <string>130310 - Environmental Parameters - DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="132" column="3">
+        <widget class="QCheckBox" name="rx130RB">
+         <property name="text">
+          <string>130311 - Environmental Parameters- DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="134" column="3">
+        <widget class="QCheckBox" name="rx132RB">
+         <property name="text">
+          <string>130313 - Humidity</string>
+         </property>
+        </widget>
+       </item>
+       <item row="137" column="3">
+        <widget class="QCheckBox" name="rx135RB">
+         <property name="text">
+          <string>130316 - Temperature, Extended Range</string>
+         </property>
+        </widget>
+       </item>
+       <item row="138" column="0">
+        <widget class="QCheckBox" name="tx136RB"/>
+       </item>
+       <item row="125" column="3">
+        <widget class="QCheckBox" name="rx123RB">
+         <property name="text">
+          <string>130070 - Route and WP Service - WP Comment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="127" column="3">
+        <widget class="QCheckBox" name="rx125RB">
+         <property name="text">
+          <string>130072 - Route and WP Service - Database Comment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="125" column="0">
+        <widget class="QCheckBox" name="tx123RB"/>
+       </item>
+       <item row="127" column="0">
+        <widget class="QCheckBox" name="tx125RB"/>
+       </item>
+       <item row="130" column="3">
+        <widget class="QCheckBox" name="rx128RB">
+         <property name="text">
+          <string>130306 - Wind Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="134" column="0">
+        <widget class="QCheckBox" name="tx132RB"/>
+       </item>
+       <item row="135" column="3">
+        <widget class="QCheckBox" name="rx133RB">
+         <property name="text">
+          <string>130314 - Actual Pressure</string>
+         </property>
+        </widget>
+       </item>
+       <item row="128" column="0">
+        <widget class="QCheckBox" name="tx126RB"/>
+       </item>
+       <item row="129" column="0">
+        <widget class="QCheckBox" name="tx127RB"/>
+       </item>
+       <item row="138" column="3">
+        <widget class="QCheckBox" name="rx136RB">
+         <property name="text">
+          <string>130320 - Tide Station Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="139" column="0">
+        <widget class="QCheckBox" name="tx137RB"/>
+       </item>
+       <item row="133" column="3">
+        <widget class="QCheckBox" name="rx131RB">
+         <property name="text">
+          <string>130312 - Temperature - DEPRECATED</string>
+         </property>
+        </widget>
+       </item>
+       <item row="135" column="0">
+        <widget class="QCheckBox" name="tx133RB"/>
+       </item>
+       <item row="139" column="3">
+        <widget class="QCheckBox" name="rx137RB">
+         <property name="text">
+          <string>130321 - Salinity Station  Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="140" column="0">
+        <widget class="QCheckBox" name="tx138RB"/>
+       </item>
+       <item row="133" column="0">
+        <widget class="QCheckBox" name="tx131RB"/>
+       </item>
+       <item row="131" column="0">
+        <widget class="QCheckBox" name="tx129RB"/>
+       </item>
+       <item row="136" column="3">
+        <widget class="QCheckBox" name="rx134RB">
+         <property name="text">
+          <string>130315 - Set Pressure</string>
+         </property>
+        </widget>
+       </item>
+       <item row="140" column="3">
+        <widget class="QCheckBox" name="rx138RB">
+         <property name="text">
+          <string>130322 - Current Station Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="126" column="0">
+        <widget class="QCheckBox" name="tx124RB"/>
+       </item>
+       <item row="128" column="3">
+        <widget class="QCheckBox" name="rx126RB">
+         <property name="text">
+          <string>130073 - Route and WP Service - Radius of Turn</string>
+         </property>
+        </widget>
+       </item>
+       <item row="130" column="0">
+        <widget class="QCheckBox" name="tx128RB"/>
+       </item>
+       <item row="132" column="0">
+        <widget class="QCheckBox" name="tx130RB"/>
+       </item>
+       <item row="129" column="3">
+        <widget class="QCheckBox" name="rx127RB">
+         <property name="text">
+          <string>130074 - Route and WP Service - WP List - WP Name and Position</string>
+         </property>
+        </widget>
+       </item>
+       <item row="136" column="0">
+        <widget class="QCheckBox" name="tx134RB"/>
+       </item>
+       <item row="137" column="0">
+        <widget class="QCheckBox" name="tx135RB"/>
+       </item>
+       <item row="142" column="0">
+        <widget class="QCheckBox" name="tx140RB"/>
+       </item>
+       <item row="142" column="3">
+        <widget class="QCheckBox" name="rx140RB">
+         <property name="text">
+          <string>130324 - Moored Buoy Station Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="149" column="0">
+        <widget class="QCheckBox" name="tx147RB"/>
+       </item>
+       <item row="152" column="0">
+        <widget class="QCheckBox" name="tx150RB"/>
+       </item>
+       <item row="152" column="3">
+        <widget class="QCheckBox" name="rx150RB">
+         <property name="text">
+          <string>130577 - Direction Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="145" column="3">
+        <widget class="QCheckBox" name="rx143RB">
+         <property name="text">
+          <string>130569 - Entertainment - Current File and Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="153" column="3">
+        <widget class="QCheckBox" name="rx151RB">
+         <property name="text">
+          <string>130578 - Vessel Speed Components</string>
+         </property>
+        </widget>
+       </item>
+       <item row="155" column="0">
+        <widget class="QCheckBox" name="tx153RB"/>
+       </item>
+       <item row="147" column="0">
+        <widget class="QCheckBox" name="tx145RB"/>
+       </item>
+       <item row="154" column="3">
+        <widget class="QCheckBox" name="rx152RB">
+         <property name="text">
+          <string>130580 - Entertainment - System Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="150" column="0">
+        <widget class="QCheckBox" name="tx148RB"/>
+       </item>
+       <item row="146" column="3">
+        <widget class="QCheckBox" name="rx144RB">
+         <property name="text">
+          <string>130570 - Entertainment - Library Data File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="144" column="3">
+        <widget class="QCheckBox" name="rx142RB">
+         <property name="text">
+          <string>130567 - Watermaker Input Setting and Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="149" column="3">
+        <widget class="QCheckBox" name="rx147RB">
+         <property name="text">
+          <string>130573 - Entertainment - Supported Source Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="151" column="3">
+        <widget class="QCheckBox" name="rx149RB">
+         <property name="text">
+          <string>130576 - Trim Tab Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="150" column="3">
+        <widget class="QCheckBox" name="rx148RB">
+         <property name="text">
+          <string>130574 - Entertainment - Supported Zone Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="145" column="0">
+        <widget class="QCheckBox" name="tx143RB"/>
+       </item>
+       <item row="144" column="0">
+        <widget class="QCheckBox" name="tx142RB"/>
+       </item>
+       <item row="148" column="0">
+        <widget class="QCheckBox" name="tx146RB"/>
+       </item>
+       <item row="148" column="3">
+        <widget class="QCheckBox" name="rx146RB">
+         <property name="text">
+          <string>130572 - Entertainment - Library Data Search</string>
+         </property>
+        </widget>
+       </item>
+       <item row="153" column="0">
+        <widget class="QCheckBox" name="tx151RB"/>
+       </item>
+       <item row="154" column="0">
+        <widget class="QCheckBox" name="tx152RB"/>
+       </item>
+       <item row="155" column="3">
+        <widget class="QCheckBox" name="rx153RB">
+         <property name="text">
+          <string>130581 - Entertainment - Zone Configuration Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="156" column="0">
+        <widget class="QCheckBox" name="tx154RB"/>
+       </item>
+       <item row="141" column="3">
+        <widget class="QCheckBox" name="rx139RB">
+         <property name="text">
+          <string>130323 - Meteorological Station Data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="156" column="3">
+        <widget class="QCheckBox" name="rx154RB">
+         <property name="text">
+          <string>130582 - Entertainment - Zone Volume Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="146" column="0">
+        <widget class="QCheckBox" name="tx144RB"/>
+       </item>
+       <item row="141" column="0">
+        <widget class="QCheckBox" name="tx139RB"/>
+       </item>
+       <item row="143" column="0">
+        <widget class="QCheckBox" name="tx141RB"/>
+       </item>
+       <item row="143" column="3">
+        <widget class="QCheckBox" name="rx141RB">
+         <property name="text">
+          <string>130560 - Payload Mass</string>
+         </property>
+        </widget>
+       </item>
+       <item row="147" column="3">
+        <widget class="QCheckBox" name="rx145RB">
+         <property name="text">
+          <string>130571 - Entertainment - Library Data Group</string>
+         </property>
+        </widget>
+       </item>
+       <item row="151" column="0">
+        <widget class="QCheckBox" name="tx149RB"/>
+       </item>
+       <item row="157" column="3">
+        <widget class="QCheckBox" name="rx155RB">
+         <property name="text">
+          <string>130583 - Entertainment - Available Audio EQ Presets</string>
+         </property>
+        </widget>
+       </item>
+       <item row="158" column="0">
+        <widget class="QCheckBox" name="tx156RB"/>
+       </item>
+       <item row="159" column="0">
+        <widget class="QCheckBox" name="tx157RB"/>
+       </item>
+       <item row="157" column="0">
+        <widget class="QCheckBox" name="tx155RB"/>
+       </item>
+       <item row="158" column="3">
+        <widget class="QCheckBox" name="rx156RB">
+         <property name="text">
+          <string>130584 - Entertainment - Bluetooth Devices</string>
+         </property>
+        </widget>
+       </item>
+       <item row="159" column="3">
+        <widget class="QCheckBox" name="rx157RB">
+         <property name="text">
+          <string>130585 - Entertainment - Bluetooth Source Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QCheckBox" name="rx3RB">
+         <property name="text">
+          <string>060160 - ISO Transport Protocol, Data Transfer</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_2">
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>RX  PGN`s   </string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignLeft">
+          <widget class="QPushButton" name="allOn">
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>All On</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignLeft">
+          <widget class="QPushButton" name="allOff">
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>All Off</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Load_button">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Load</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Save_button">
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Reset_button">
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="tx2RB"/>
+       </item>
+       <item row="6" column="3">
+        <widget class="QCheckBox" name="rx4RB">
+         <property name="text">
+          <string>060416 - ISO Transport Protocol, Connection Management - Abort group function</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="tx5RB"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="tx4RB"/>
+       </item>
+       <item row="8" column="0">
+        <widget class="QCheckBox" name="tx6RB"/>
+       </item>
+       <item row="8" column="3">
+        <widget class="QCheckBox" name="rx6RB">
+         <property name="text">
+          <string>065240 - ISO Commanded Address</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="QCheckBox" name="rx5RB">
+         <property name="text">
+          <string>060928 - ISO Address Claim</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QCheckBox" name="tx7RB"/>
+       </item>
+       <item row="10" column="0">
+        <widget class="QCheckBox" name="tx8RB"/>
+       </item>
+       <item row="10" column="3">
+        <widget class="QCheckBox" name="rx8RB">
+         <property name="text">
+          <string>126464 - PGN List -  Received PGNs group function</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QCheckBox" name="tx9RB"/>
+       </item>
+       <item row="3" column="3">
+        <widget class="QCheckBox" name="rx1RB">
+         <property name="text">
+          <string>059392 - ISO Acknowledgment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3">
+        <widget class="QCheckBox" name="rx7RB">
+         <property name="text">
+          <string>126208 - NMEA -  Request group function</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="tx1RB"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>TX /</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QCheckBox" name="rx2RB">
+         <property name="text">
+          <string>059904 - ISO Request</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="tx3RB"/>
+       </item>
+       <item row="21" column="3">
+        <widget class="QCheckBox" name="rx19RB">
+         <property name="text">
+          <string>127233 - Man Overboard Notification(MOB)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QCheckBox" name="tx11RB"/>
+       </item>
+       <item row="12" column="0">
+        <widget class="QCheckBox" name="tx10RB"/>
+       </item>
+       <item row="20" column="0">
+        <widget class="QCheckBox" name="tx18RB"/>
+       </item>
+       <item row="21" column="0">
+        <widget class="QCheckBox" name="tx19RB"/>
+       </item>
+       <item row="23" column="3">
+        <widget class="QCheckBox" name="rx21RB">
+         <property name="text">
+          <string>127245 - Rudder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QCheckBox" name="tx15RB"/>
+       </item>
+       <item row="16" column="3">
+        <widget class="QCheckBox" name="rx14RB">
+         <property name="text">
+          <string>126988 - Alert Value</string>
+         </property>
+        </widget>
+       </item>
+       <item row="23" column="0">
+        <widget class="QCheckBox" name="tx21RB"/>
+       </item>
+       <item row="24" column="3">
+        <widget class="QCheckBox" name="rx22RB">
+         <property name="text">
+          <string>127250 - Vessel Heading</string>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="3">
+        <widget class="QCheckBox" name="rx23RB">
+         <property name="text">
+          <string>127251 - Rate of Turn</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="3">
+        <widget class="QCheckBox" name="rx12RB">
+         <property name="text">
+          <string>126986 - Alert Configuration</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="3">
+        <widget class="QCheckBox" name="rx16RB">
+         <property name="text">
+          <string>126993 - Heartbeat</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="0">
+        <widget class="QCheckBox" name="tx14RB"/>
+       </item>
+       <item row="15" column="0">
+        <widget class="QCheckBox" name="tx13RB"/>
+       </item>
+       <item row="14" column="0">
+        <widget class="QCheckBox" name="tx12RB"/>
+       </item>
+       <item row="18" column="0">
+        <widget class="QCheckBox" name="tx16RB"/>
+       </item>
+       <item row="20" column="3">
+        <widget class="QCheckBox" name="rx18RB">
+         <property name="text">
+          <string>126998 - Configuration Information</string>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="3">
+        <widget class="QCheckBox" name="rx20RB">
+         <property name="text">
+          <string>127237 - Heading/Track Control</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="3">
+        <widget class="QCheckBox" name="rx15RB">
+         <property name="text">
+          <string>126992 - System Time</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0">
+        <widget class="QCheckBox" name="tx17RB"/>
+       </item>
+       <item row="22" column="0">
+        <widget class="QCheckBox" name="tx20RB"/>
+       </item>
+       <item row="24" column="0">
+        <widget class="QCheckBox" name="tx22RB"/>
+       </item>
+       <item row="13" column="3">
+        <widget class="QCheckBox" name="rx11RB">
+         <property name="text">
+          <string>126985 - Alert Text</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="3">
+        <widget class="QCheckBox" name="rx9RB">
+         <property name="text">
+          <string>126983 - Alert</string>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="0">
+        <widget class="QCheckBox" name="tx23RB"/>
+       </item>
+       <item row="15" column="3">
+        <widget class="QCheckBox" name="rx13RB">
+         <property name="text">
+          <string>126987 - Alert Threshold</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="3">
+        <widget class="QCheckBox" name="rx10RB">
+         <property name="text">
+          <string>126984 - Alert Response</string>
+         </property>
+        </widget>
+       </item>
+       <item row="26" column="0">
+        <widget class="QCheckBox" name="tx24RB"/>
+       </item>
+       <item row="19" column="3">
+        <widget class="QCheckBox" name="rx17RB">
+         <property name="text">
+          <string>126996 - Product Information</string>
+         </property>
+        </widget>
+       </item>
+       <item row="26" column="3">
+        <widget class="QCheckBox" name="rx24RB">
+         <property name="text">
+          <string>127252 - Heave</string>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="0">
+        <widget class="QCheckBox" name="tx25RB"/>
+       </item>
+       <item row="27" column="3">
+        <widget class="QCheckBox" name="rx25RB">
+         <property name="text">
+          <string>127257 - Attitude</string>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="0">
+        <widget class="QCheckBox" name="tx26RB"/>
+       </item>
+       <item row="28" column="3">
+        <widget class="QCheckBox" name="rx26RB">
+         <property name="text">
+          <string>127258 - Magnetic Variation</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>96</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="applyButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
