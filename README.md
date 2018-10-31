@@ -1,7 +1,9 @@
 # iKonvert
 
 Welcome to our iKonvert Developer's Guide (SDK) on GitHub. This guide is intended to help developers quickly get to grips with our iKonvert NMEA2000 Gateway and implement it with their Desktop applications or embedded hardware designs. 
-<img src="https://github.com/digitalyacht/iKonvert/blob/master/Images/iKonvert_USB_Hi_Res.jpg" width=50%>
+<br>
+<img src="https://github.com/digitalyacht/iKonvert/blob/master/Images/iKonvert_USB_Hi_Res.jpg" width=70% align="middle">
+<br>
 The iKonvert NMEA2000 Gateway is designed to allow an Application Developer or Equipment Manufacturer to support bi-directional communication with an NMEA2000 network, through simple serial messages. Any individual or company that wishes to integrate iKonvert will need as a minimum the NMEA2000 Appendix A+B which is available from [http://nmea.org](http://nmea.org) for both NMEA members and non-members.
 
 A full developer's guide is provided in the associated Wiki.
