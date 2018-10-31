@@ -18,7 +18,7 @@ Included in this repository are:-
 
 *4.  The latest iKonvert firmware (currently V1.00)*
 
-*5.  The iKonvert Developers Guide V1.02 in Word format*
+*5.  The iKonvert Developers Guide V1.02 (pdf)*
 
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
 
