@@ -8,10 +8,6 @@ The iKonvert NMEA2000 Gateway is designed to allow an Application Developer or E
 
 <img src="https://github.com/digitalyacht/iKonvert/blob/master/Images/iKonvert_Tool.gif" width=70%>
 
-A full developer's guide is provided in the associated Wiki.
-
-No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
-
 Included in this repository are:-
 
 1.  Source code for a QT based App showing how to talk to the gateway
@@ -24,3 +20,6 @@ Included in this repository are:-
 
 5.  The iKonvert Developers Guide V1.02 in Word format
 
+No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
+
+A full developer's guide is provided in the [associated Wiki](https://github.com/digitalyacht/iKonvert/wiki).
