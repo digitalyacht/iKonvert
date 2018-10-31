@@ -10,15 +10,15 @@ The iKonvert NMEA2000 Gateway is designed to allow an Application Developer or E
 
 Included in this repository are:-
 
-1.  Source code for a QT based App showing how to talk to the gateway
+*1.  Source code for a QT based App showing how to talk to the gateway*
 
-2.  Windows executable of the QT Test App so you can get started stright away
+*2.  Windows executable of QT Test App so you can start playing straight away*
 
-3.  iKonvert Firmware Update Tool for Windows
+*3.  iKonvert Firmware Update Tool for Windows*
 
-4.  The latest iKonvert firmware (currently V1.00)
+*4.  The latest iKonvert firmware (currently V1.00)*
 
-5.  The iKonvert Developers Guide V1.02 in Word format
+*5.  The iKonvert Developers Guide V1.02 in Word format*
 
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
 
