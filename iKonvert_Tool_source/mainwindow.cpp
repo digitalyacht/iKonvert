@@ -165,6 +165,30 @@ void MainWindow::process_line(QByteArray buf)
                           QString status = QString::fromUtf8(buf);
                           QStringList status_list = status.split(","); // split by comma
 
+                          if(status_list[2]=='\0' && status_list[4]=='\0' && initialised){
+
+                              initialised = false;
+
+                              while(!lines.isEmpty())
+                              lines.clear();
+
+                              line_count_all = 0;
+
+                              m_console->putData("De-init: iKonvert Gateway is not on the NMEA2000 bus\r\n");
+                              showStatusMessage(tr("Disconnected"));
+
+                              m_ui->actionConnect->setEnabled(true);
+                              m_ui->actionDisconnect->setEnabled(false);
+                              m_ui->actionConfigure->setEnabled(true);
+                              m_ui->actionRun->setEnabled(false);
+                              m_ui->actionStop->setEnabled(false);
+                              m_ui->actionRec->setEnabled(false);
+                              m_ui->actionSend->setEnabled(false);
+                              m_ui->actionSend_126992->setEnabled(false);
+                              m_ui->actionStop_Record->setEnabled(false);
+
+                          }
+
                           showStatusMessage(tr("Bus Load: %1, Devices Online: %2, Uptime: %3 sec, Address: %4, Rejected TX PGN`s: %5")
                                             .arg(status_list[2]).arg(status_list[4]).arg(status_list[5]).arg(status_list[6]).arg(status_list[7])); // show in status bar
 
@@ -749,11 +773,23 @@ void MainWindow::send_126992() // sending system time PGN command to the gateway
                 hexTime.append(hexmsecs.mid(2,2));
                 hexTime.append(hexmsecs.mid(0,2));
 
-        QString system_time_PGN = QString("!PDGY,126992,255,00F5"+hexDate.toUtf8()+hexTime.toUtf8()+"\r\n");
+        QByteArray bazeg4 = QByteArray::fromHex("00f5"+hexDate.toUtf8()+hexTime.toUtf8()).toBase64();
 
-        m_console->putData(system_time_PGN.toUtf8());
+        QString system_time_PGN = QString("!PDGY,126992,255,"+bazeg4+"\r\n");
 
         m_serial->write(system_time_PGN.toUtf8());
+
+        if(base64){
+
+            m_console->putData(system_time_PGN.toUtf8());
+
+        }else{
+
+            QString system_time_PGN = QString("!PDGY,126992,255,00f5"+hexDate.toUtf8()+hexTime.toUtf8()+"\r\n");
+
+            m_console->putData(system_time_PGN.toUtf8());
+
+        }
 
     }
 
@@ -782,9 +818,13 @@ void MainWindow::generate()
 
     if(temp_list.count() > 6 && temp_list[0] == "!PDGY"){
 
-        QString temp = QString("%1,%2,%3,%4\r\n").arg(temp_list[0]).arg(temp_list[1]).arg(temp_list[4]).arg(temp_list[6]);
+        QByteArray base64data = QByteArray::fromHex(temp_list[6].toUtf8()).toBase64();
 
-        if (m_serial->isOpen()) writeData(temp.toUtf8());
+        QString temp = QString(temp_list[0]+","+temp_list[1]+","+temp_list[4]+","+base64data+"\r\n");
+
+        if (m_serial->isOpen()) writeData(temp.toUtf8());   
+
+        if(!base64) temp = QString(temp_list[0]+","+temp_list[1]+","+temp_list[4]+","+temp_list[6]+"\r\n");
 
         QString temp2 = QString("%1%2").arg("Sending: ").arg(temp);
 
@@ -823,11 +863,35 @@ void MainWindow::send_clipboard()
 
     if(clipboard.mid(0, 6)=="!PDGY," || clipboard.mid(0, 6)=="$PDGY,"){
 
+        QString status3 = clipboard;
+        QStringList status3_list = status3.split(","); // split by comma
+
+        if(status3_list.count() > 3){
+
+            QByteArray bazeg6 = QByteArray::fromHex(status3_list[3].toUtf8()).toBase64();
+
+            QString base64coded = QString(status3_list[0]+","
+                    + status3_list[1]+","
+                    + status3_list[2]+","
+                    + bazeg6 + "\r\n"); // assemble the sentence again, with base64 data
+
         clipboard = QString(clipboard + "\r\n");
 
-        m_console->putData(clipboard.toUtf8());
+        m_serial->write(base64coded.toUtf8());
 
-        m_serial->write(clipboard.toUtf8());
+        if(base64){
+
+            m_console->putData(base64coded.toUtf8());
+
+        }else{
+
+            m_console->putData(clipboard.toUtf8());
+
+        }
+
+
+        }
+
 
     }
 
