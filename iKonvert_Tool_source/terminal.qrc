@@ -10,5 +10,6 @@
         <file>images/rec.png</file>
         <file>images/send-button.png</file>
         <file>images/clock.png</file>
+        <file>images/paste-button.png</file>
     </qresource>
 </RCC>

@@ -80,6 +80,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_ui->actionConfigure->setEnabled(true);
     m_ui->actionRun->setEnabled(false);
     m_ui->actionSend->setEnabled(false);
+    m_ui->actionPaste->setEnabled(true);
     m_ui->actionSend_126992->setEnabled(false);
     m_ui->actionStop->setEnabled(false);
     m_ui->actionStop_Record->setEnabled(false);
@@ -96,7 +97,11 @@ MainWindow::MainWindow(QWidget *parent) :
 //! [2]
     connect(m_console, &Console::getData, this, &MainWindow::writeData);
 
+    if (m_serial->isOpen()) m_serial->close();
+
     openSerialPort();
+
+    m_console->setEnabled(true);
 
     //QTimer *timer = new QTimer(this);
     //QObject::connect(timer, SIGNAL(timeout()), this, SLOT(send_126992()));
@@ -160,7 +165,7 @@ void MainWindow::process_line(QByteArray buf)
 
           if(buf.mid(0, 13) == "$PDGY,000000,"){ // Network Status Sentence received
 
-              if(showNSM) m_console->putData(buf); //only show Network Status Message in terminal if Show N.S.M. ticked
+              if(!showNSM) m_console->putData(buf); //only show Network Status Message in terminal if Show N.S.M. ticked
 
                           QString status = QString::fromUtf8(buf);
                           QStringList status_list = status.split(","); // split by comma
@@ -797,8 +802,8 @@ void MainWindow::send_126992() // sending system time PGN command to the gateway
 
 void MainWindow::about()
 {
-    QMessageBox::about(this, tr("About iKonvert Gateway test by Digital Yacht"),
-                       tr("<b>iKonvert Gateway test by Akos Kelemen<b>"));
+    QMessageBox::about(this, tr("About iKonvert Tool v1.10 by Digital Yacht"),
+                       tr("<b>iKonvert Tool by Akos Kelemen<b>"));
 }
 
 //! [6]
@@ -857,11 +862,28 @@ void MainWindow::start_generate()
 
 }
 
+
+void MainWindow::send_clipboard_nochange()
+{
+    QString clipboard = QApplication::clipboard()->text();
+
+    if(clipboard.mid(0, 4)!="send"){
+
+        clipboard = QString(clipboard + "\r\n");
+
+        m_serial->write(clipboard.toUtf8());
+
+        m_console->putData(clipboard.toUtf8());
+
+    }
+
+}
+
 void MainWindow::send_clipboard()
 {
     QString clipboard = QApplication::clipboard()->text();
 
-    if(clipboard.mid(0, 6)=="!PDGY," || clipboard.mid(0, 6)=="$PDGY,"){
+    if(clipboard.mid(0, 6)=="!PDGY,"){
 
         QString status3 = clipboard;
         QStringList status3_list = status3.split(","); // split by comma
@@ -877,13 +899,15 @@ void MainWindow::send_clipboard()
 
         clipboard = QString(clipboard + "\r\n");
 
-        m_serial->write(base64coded.toUtf8());
-
         if(base64){
+
+            m_serial->write(clipboard.toUtf8());
 
             m_console->putData(base64coded.toUtf8());
 
         }else{
+
+            m_serial->write(base64coded.toUtf8());
 
             m_console->putData(clipboard.toUtf8());
 
@@ -892,6 +916,14 @@ void MainWindow::send_clipboard()
 
         }
 
+
+    }else if(clipboard.mid(0, 6)=="$PDGY,"){
+
+        clipboard = QString(clipboard + "\r\n");
+
+        m_serial->write(clipboard.toUtf8());
+
+        m_console->putData(clipboard.toUtf8());
 
     }
 
@@ -974,6 +1006,7 @@ void MainWindow::initActionsConnections()
     connect(m_ui->actionAboutQt, &QAction::triggered, qApp, &QApplication::aboutQt);
     connect(m_ui->actionRun, &QAction::triggered, this, &MainWindow::start_generate);
     connect(m_ui->actionSend, &QAction::triggered, this, &MainWindow::send_clipboard);
+    connect(m_ui->actionPaste, &QAction::triggered, this, &MainWindow::send_clipboard_nochange);
     connect(m_ui->actionRec, &QAction::triggered, this, &MainWindow::start_record);
     connect(m_ui->actionStop_Record, &QAction::triggered, this, &MainWindow::stop_record);
     connect(m_ui->actionSend_126992, &QAction::triggered, this, &MainWindow::send_126992);

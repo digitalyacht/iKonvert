@@ -50,16 +50,19 @@
            </size>
           </property>
           <property name="minimum">
-           <number>50</number>
+           <number>1</number>
           </property>
           <property name="maximum">
            <number>10000</number>
           </property>
           <property name="singleStep">
-           <number>10</number>
+           <number>1</number>
           </property>
           <property name="value">
-           <number>100</number>
+           <number>10</number>
+          </property>
+          <property name="displayIntegerBase">
+           <number>10</number>
           </property>
          </widget>
         </item>
@@ -264,7 +267,10 @@
       <item row="9" column="0">
        <widget class="QCheckBox" name="ShowNSMCheckBox">
         <property name="text">
-         <string>Show N.S.M.</string>
+         <string>Hide N.S.M.</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
         </property>
        </widget>
       </item>

@@ -23,7 +23,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>iKonvert Gateway test by Digital Yacht</string>
+   <string>iKonvert Tool v1.10 by Digital Yacht</string>
   </property>
   <property name="documentMode">
    <bool>false</bool>
@@ -90,8 +90,9 @@
     <addaction name="actionRec"/>
     <addaction name="actionStop_Record"/>
     <addaction name="separator"/>
-    <addaction name="actionSend"/>
+    <addaction name="actionPaste"/>
     <addaction name="actionSend_126992"/>
+    <addaction name="actionSend"/>
    </widget>
    <addaction name="menuCalls"/>
    <addaction name="menuTools"/>
@@ -129,6 +130,7 @@
    <addaction name="actionRec"/>
    <addaction name="actionStop_Record"/>
    <addaction name="separator"/>
+   <addaction name="actionPaste"/>
    <addaction name="actionSend_126992"/>
    <addaction name="actionSend"/>
   </widget>
@@ -292,7 +294,7 @@
     <string>Send PGN from Clipboard</string>
    </property>
    <property name="toolTip">
-    <string>Send content of the Clipboard to the Gateway</string>
+    <string>Converts the content of the Clipboard to Base64 and send it to the Gateway</string>
    </property>
    <property name="shortcut">
     <string>Alt+R</string>
@@ -308,6 +310,21 @@
    </property>
    <property name="toolTip">
     <string>Send System Time PGN(126992)</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="terminal.qrc">
+     <normaloff>:/images/paste-button.png</normaloff>:/images/paste-button.png</iconset>
+   </property>
+   <property name="text">
+    <string>Send command from Clipboard</string>
+   </property>
+   <property name="toolTip">
+    <string>Send content of the Clipboard to the Gateway</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
    </property>
   </action>
  </widget>

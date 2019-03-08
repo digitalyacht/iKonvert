@@ -88,6 +88,7 @@ public slots:
     void start_generate();
     void start_record();
     void send_clipboard();
+    void send_clipboard_nochange();
     void stop_record();
     void stop_generate();
     void send_rx_list();
