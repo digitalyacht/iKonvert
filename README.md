@@ -14,11 +14,13 @@ Included in this repository are:-
 
 *2.  iKonvert Tool source code showing how to talk to the gateway*
 
-*3.  iKonvert Firmware Updater for Windows*
+*3.  iKonvert STUMP Firmware Updater for Windows*
 
-*4.  The latest iKonvert firmware (V1.05)*
+*4.  The latest iKonvert firmware (V1.096)*
 
 *5.  The iKonvert Developers Guide V1.03 (pdf)*
+
+*6.  Latest User Manuals for iKonvert ISO and USB units*
 
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
 
