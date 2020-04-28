@@ -1,6 +1,6 @@
 # iKonvert
 
-Welcome to our iKonvert Developer's Guide (SDK) on GitHub. This guide is intended to help developers quickly get to grips with our iKonvert NMEA2000 Gateway and implement it within their Desktop applications or embedded hardware designs. 
+Welcome to our iKonvert Developer's Guide (SDK) on GitHub. This guide is intended to help developers quickly get to grips with our iKonvert NMEA2000 Gateway and implement it within their Desktop applications or embedded hardware designs.
 <br>
 <img src="https://github.com/digitalyacht/iKonvert/blob/master/Images/iKonvert_USB_Hi_Res.jpg" width=70%>
 <br>
@@ -10,13 +10,13 @@ The iKonvert NMEA2000 Gateway is designed to allow an Application Developer or E
 
 Included in this repository are:-
 
-*1.  Windows executable of the iKonvert Tool (V1.10) so you can start playing straight away*
+*1.  Windows executable of the iKonvert Command Reference App (V1.30) so you can start playing straight away*
 
-*2.  iKonvert Tool source code showing how to talk to the gateway*
+*2.  iKonvert Command Reference App source code showing how to talk to the gateway*
 
-*3.  iKonvert STUMP Firmware Updater for Windows*
+*3.  STM Flash Tool for Firmware Updating (Windows only)*
 
-*4.  The latest iKonvert firmware (V1.096)*
+*4.  The latest iKonvert firmware (V2.22)*
 
 *5.  The iKonvert Developers Guide V1.03 (pdf)*
 
