@@ -18,7 +18,7 @@ Included in this repository are:-
 
 *4.  The latest iKonvert firmware (V2.31)*
 
-*5.  The iKonvert Developers Guide V1.03 (pdf)*
+*5.  The iKonvert Developers Guide V1.04 (pdf)*
 
 *6.  Latest User Manuals for iKonvert ISO and USB units*
 
