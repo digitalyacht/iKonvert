@@ -16,7 +16,7 @@ Included in this repository are:-
 
 *3.  STM Flash Tool for Firmware Updating (Windows only)*
 
-*4.  The latest iKonvert firmware (V2.22)*
+*4.  The latest iKonvert firmware (V2.31)*
 
 *5.  The iKonvert Developers Guide V1.03 (pdf)*
 
