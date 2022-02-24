@@ -22,6 +22,8 @@ Included in this repository are:-
 
 *6.  Latest User Manuals for iKonvert ISO and USB units*
 
-No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems.
+*7.  Latest iKonvert USB Drivers for Windows OS* 
+
+No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems. If you are using iKonvert with a MAC or LINUX based computer, the drivers should already be included in the OS kernel, but if you are using Windows please download the latest drivers and install either the 32bit or 64bit drivers as applicable to your computer.
 
 A full developer's guide is provided in the [associated Wiki](https://github.com/digitalyacht/iKonvert/wiki).
