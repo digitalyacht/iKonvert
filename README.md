@@ -16,13 +16,15 @@ Included in this repository are:-
 
 *3.  STM Flash Tool for Firmware Updating (Windows only)*
 
-*4.  The latest iKonvert firmware (V2.65)*
+*4.  The latest iKonvert firmware for STM32F103 based units (V2.65)*
 
-*5.  The iKonvert Developers Guide V1.04 (pdf)*
+*5.  The latest iKonvert firmware for STM32F476 based units (V3.08)*
 
-*6.  Latest User Manuals for iKonvert ISO and USB units*
+*6.  The iKonvert Developers Guide V1.04 (pdf)*
 
-*7.  Latest iKonvert USB Drivers for Windows OS* 
+*7.  Latest User Manuals for iKonvert ISO and USB units*
+
+*8.  Latest iKonvert USB Drivers for Windows OS* 
 
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems. If you are using iKonvert with a MAC or LINUX based computer, the drivers should already be included in the OS kernel, but if you are using Windows please download the latest drivers and install either the 32bit or 64bit drivers as applicable to your computer.
 
