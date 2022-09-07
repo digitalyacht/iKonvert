@@ -28,4 +28,6 @@ Included in this repository are:-
 
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems. If you are using iKonvert with a MAC or LINUX based computer, the drivers should already be included in the OS kernel, but if you are using Windows please download the latest drivers and install either the 32bit or 64bit drivers as applicable to your computer.
 
+Our iKonvert will automatically take care of the complex NMEA 2000 bus management; claiming an address, respondng to other devices, etc. which significantly simplifies NMEA 2000 implementation. For developers that want an even quicker implementation path, iKonvert is compatible with the open source CANBoat library (coded in C) that translates the binary PGN data in to a more manageable JSON format. More information on using iKonvert with CANBoat [is available here.](https://github.com/canboat/canboat/wiki/ikonvert-serial)  
+
 A full developer's guide is provided in the [associated Wiki](https://github.com/digitalyacht/iKonvert/wiki).
