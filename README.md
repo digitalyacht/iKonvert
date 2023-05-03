@@ -16,9 +16,9 @@ Included in this repository are:-
 
 *3.  STM Flash Tool for Firmware Updating (Windows only)*
 
-*4.  The latest iKonvert firmware for STM32F103 based units (V2.65)*
+*4.  The latest iKonvert firmware for STM32F103 based units (V2.70)*
 
-*5.  The latest iKonvert firmware for STM32F476 based units (V3.08)*
+*5.  The latest iKonvert firmware for STM32F476 based units (V3.16)*
 
 *6.  The iKonvert Developers Guide V1.04 (pdf)*
 
