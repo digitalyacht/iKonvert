@@ -18,7 +18,7 @@ Included in this repository are:-
 
 *4.  The latest iKonvert firmware for STM32F103 based units (V2.70)*
 
-*5.  The latest iKonvert firmware for STM32F476 based units (V3.16)*
+*5.  The latest iKonvert firmware for STM32L476 based units (V3.26)*
 
 *6.  The iKonvert Developers Guide V1.04 (pdf)*
 
