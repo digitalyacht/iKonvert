@@ -26,8 +26,16 @@ Included in this repository are:-
 
 *8.  Latest iKonvert USB Drivers for Windows OS* 
 
+*9.  New NMEA2000 Display Web App (Multi-platform)* 
+
 No special libraries are required to integrate iKonvert and the USB version uses an FTDI chipset that has good driver support for all common operating systems. If you are using iKonvert with a MAC or LINUX based computer, the drivers should already be included in the OS kernel, but if you are using Windows please download the latest drivers and install either the 32bit or 64bit drivers as applicable to your computer.
 
 Our iKonvert will automatically take care of the complex NMEA 2000 bus management; claiming an address, respondng to other devices, etc. which significantly simplifies NMEA 2000 implementation. For developers that want an even quicker implementation path, iKonvert is compatible with the open source CANBoat library (coded in C) that translates the binary PGN data in to a more manageable JSON format. More information on using iKonvert with CANBoat [is available here.](https://github.com/canboat/canboat/wiki/ikonvert-serial)  
 
 A full developer's guide is provided in the [associated Wiki](https://github.com/digitalyacht/iKonvert/wiki).
+
+**IMPORTANT NEWS
+
+Digital Yacht have launched an NMEA2000 Display App for our iKonvert USB gateway. It runs in any modern browser that supports the Web Serial API, including Chrome, Edge and Opera. This simple single HTML file (no installation required), for the first time, provides a powerful NMEA2000 display program that can run on any desktop operating system.
+
+A separate GitHub page for this Display Program and for other future developments can be [reached here](https://github.com/digitalyacht/NMEA2000-Display-App)
